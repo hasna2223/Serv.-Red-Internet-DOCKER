@@ -108,4 +108,100 @@ Ejecutando un contenedor interactivo:
 
 ![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/9c05ac75-457a-4d73-a5de-f7955faf925f)
 
+El contenedor se para cuando salimos de él. Para volver a conectarnos a él:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/dbfcd57b-e73b-4b52-afb4-5ce79c33a572)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/b2fe1f6e-0f6e-4ce7-84b5-12ddcd730af8)
+
+Con la orden docker restart reiniciamos el contenedor, lo paramos y lo iniciamos.
+
+Para mostrar información de un contenedor ejecutamos docker inspect:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/0928efa9-df76-447e-9851-c23f9b4ec97c)
+
+En realidad, todas las imágenes tienen definidas un proceso que se ejecuta, en concreto la imagen ubuntu tiene definida por defecto el proceso bash, por lo que podríamos haber ejecutado:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/48a65908-46cb-4ce9-8d02-7ec9d80c894b)
+
+
+Web
+
+Creando un contenedor con un servidor web:
+
+Tenemos muchas imágenes en el registro público docker hub, por ejemplo podemos crear un servidor web con apache 2.4:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/a9af1d97-f377-4903-bb1c-f85efcb405dd)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/bb9d390b-1893-4379-8376-457796db6d26)
+
+Para acceder al log del contenedor podemos ejecutar:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/8f972314-c7de-4583-abf0-d73b1520179f)
+
+
+Modulo 2 
+
+Creacion
+
+Todas las imágenes tiene definidas un proceso que se ejecuta por defecto, pero en la mayoría de los casos podemos indicar un proceso al crear un contenedor.
+
+Por ejemplo en la imagen ubuntu el proceso por defecto es bash, por lo tanto podemos ejecutar el siguiente:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/132b7858-3c9b-4d53-9e2b-6d9331a42358)
+
+Pero podemos indicar el comando a ejecutar en la creación del contenedor:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/0aa1ddbf-6646-4214-9760-818725330bb3)
+
+Otro ejemplo: la imagen httpd:2.4 ejecuta un servidor web por defecto, por lo tanto al crear el contenedor:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/c66aab93-9035-4a70-99a6-789878b6a25c)
+
+
+Dockerhub 
+
+Las imágenes de Docker son plantillas de solo lectura, es decir, una imagen puede contener el sistema de archivo de un sistema operativo como Debian, pero esto solo nos permitirá crear los contenedores basados en esta configuración. Si hacemos cambios en el contenedor ya lanzado, al detenerlo esto no se verá reflejado en la imagen. El Registro docker es un componente donde se almacena las imágenes generadas por el Docker Engine. Puede estar instalada en un servidor independiente y es un componente fundamental, ya que nos permite distribuir nuestras aplicaciones. Es un proyecto open source que puede ser instalado gratuitamente en cualquier servidor, pero, como hemos comentado, el proyecto nos ofrece Docker Hub. El nombre de una imagen suele estar formado por tres partes: usuario/nombre:etiqueta
+
+
+Gestion
+
+Gestión de imágenes:
+
+Para crear un contenedor es necesario usar una imagen que tengamos descargado en nuestro registro local. Por lo tanto al ejecutar docker run se comprueba si tenemos la versión indicada de la imagen y si no es así, se precede a su descarga.
+
+
+Mediawiki
+
+Ejemplo: Desplegando la aplicación mediawiki
+
+Vamos a crear distintos contenedores usando etiquetas distintas al indicar el nombre de la imagen, posteriormente accederemos a la aplicación y podremos ver la versión instalada: En primer lugar vamos a instalar la última versión:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/d174ad5e-b0b6-44fe-8066-7243e7761e07)
+
+Si accedemos a la ip de nuestro ordenador, al puerto 800, podemos observar que hemos instalado la versión 1.39.1
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/b5c55228-22e2-4d43-9436-372db15f75c0)
+
+
+organizacion
+
+¿Cómo se organizan las imágenes?
+
+Cuando creamos un contenedor ocupa muy poco de disco duro, porque las capas de la imagen desde la que se ha creado se comparten con el contenedor: Veamos el tamaño de nuestra imagen ubuntu:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/73ee3c39-5750-4f73-b90c-522cf0804fd1)
+
+Si creamos un contenedor interactivo:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/0bacec8c-6aa8-4b53-bec5-70ff68fa7afe)
+
+Nos salimos, y a continuación visualizamos los contenedores con la opción -s (size):
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/3f2a2239-69a3-4362-9bd0-3b9e4df481d5)
+
+Nos damos cuenta de que el tamaño real del contenedor es 0B y el virtual, el que comparte con la imagen son los 72,9MB que es el tamaño de la imagen ubuntu.
+Si a continuación volvemos a acceder al contenedor y creamos un fichero
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/fdfe0581-9e42-4265-bb6f-fd6dbfd65f32)
 

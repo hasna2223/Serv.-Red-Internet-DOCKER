@@ -59,3 +59,7 @@ Ahora publicamos nuestra imagen docker:
 
 ![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/ea80ed33-63f9-4db0-a0eb-27862c68cffa)
 
+Nota: Para publicar una imagen debes conectar previamente con dockerhub, tal como se muestra en el siguiente artículo:
+
+https://www.thegeekdiary.com/how-to-build-and-push-docker-image-to-the-docker-hub-repository/
+

@@ -205,3 +205,10 @@ Si a continuación volvemos a acceder al contenedor y creamos un fichero
 
 ![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/fdfe0581-9e42-4265-bb6f-fd6dbfd65f32)
 
+
+Modulo 3
+
+asociacion_bind_mount
+
+Asociando almacenamiento a los contenedores: bind mount
+En este caso vamos a crear un directorio en el sistema de archivo del host, donde vamos a crear un fichero index.html

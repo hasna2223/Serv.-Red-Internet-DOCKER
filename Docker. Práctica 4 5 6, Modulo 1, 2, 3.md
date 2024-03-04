@@ -362,4 +362,6 @@ Para ejecutarlo usamos este comando.
 
 ![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/dac7f9c2-1b8b-4a18-a3ff-1d41fa6ab86f)
 
+En el navegador ponemos http://localhost:8080 Y como veremos ya funciona correctamiente
+
 ![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/609e84c5-38fb-436a-af99-9653e13d71c6)

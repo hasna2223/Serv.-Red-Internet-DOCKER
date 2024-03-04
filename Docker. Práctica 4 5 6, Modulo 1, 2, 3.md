@@ -239,5 +239,12 @@ Lo primero que vamos a hacer es crear un volumen docker:
 
 A continuación creamos un contenedor con el volumen asociado, usando --mount, y creamos un fichero index.html:
 
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/2a815750-cfa8-410f-916d-e0c33bf16906)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/cd5f01bb-e450-448a-81aa-b811a7b1fdf4)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/5230d449-1712-4109-8ee3-7062a7edbc5e)
+
+Después de borrar el contenedor, volvemos a crear otro contenedor con el mismo volumen asociado:
 
 

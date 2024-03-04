@@ -218,4 +218,6 @@ En este caso vamos a crear un directorio en el sistema de archivo del host, dond
 
 Y comprobamos que realmente estamos sirviendo el fichero que tenemos en el directorio que hemos creado:
 
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/690cb4f5-8c45-4677-9fcf-547b8c08b752)
+
 

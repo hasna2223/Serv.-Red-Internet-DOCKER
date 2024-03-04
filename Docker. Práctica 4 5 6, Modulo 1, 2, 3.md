@@ -220,4 +220,24 @@ Y comprobamos que realmente estamos sirviendo el fichero que tenemos en el direc
 
 ![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/690cb4f5-8c45-4677-9fcf-547b8c08b752)
 
+Eliminamos el contenedor y volvemos a crear otro con el directorio montado:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/dcfb8e61-1c80-4110-bb34-8e6263377cad)
+
+
+Asociacion_volumen
+
+Asociando almacenamiento a los contenedores: volúmenes Docker
+
+Veamos como puedo usar los volúmenes y los bind mounts en los contenedores. Aunque dos formas de asociar el almacenamiento al contenedor nosotros vamos a usar el flag --volume o -v. Si usamos imágenes de DockerHub, debemos leer la información que cada imagen nos proporciona en su página ya que esa información suele indicar cómo persistir los datos de esa imagen, ya sea con volúmenes o bind mounts, y cuáles son las carpetas importantes en caso de ser imágenes que contengan ciertos servicios (web, base de datos etc...)
+
+Ejemplo usando volúmenes docker:
+
+Lo primero que vamos a hacer es crear un volumen docker:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/a6b5e142-4152-4585-8cc9-ec7f86783b47)
+
+A continuación creamos un contenedor con el volumen asociado, usando --mount, y creamos un fichero index.html:
+
+
 

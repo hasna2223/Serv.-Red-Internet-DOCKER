@@ -1,4 +1,4 @@
-                                                  Docker. Práctica 4 5 6, Modulo 1, 2, 3
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/c1984f1e-1409-4c1b-bac6-1c1262179089)                                                  Docker. Práctica 4 5 6, Modulo 1, 2, 3
                                                             HASNA BIDAN 2º ASIR
 
 Modulo 1
@@ -246,5 +246,81 @@ A continuación creamos un contenedor con el volumen asociado, usando --mount, y
 ![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/5230d449-1712-4109-8ee3-7062a7edbc5e)
 
 Después de borrar el contenedor, volvemos a crear otro contenedor con el mismo volumen asociado:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/f4868f37-8c44-4292-b979-e4c862843469)
+
+Y podemos comprobar que no no se ha perdido la información (el fichero index.html):
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/0e611a88-91bf-4975-b2ea-a0787e439c06)
+
+
+
+Guestbook
+
+Ejemplo 1: Despliegue de la aplicación Guestbook
+
+Los dos contenedores tienen que estar en la misma red y deben tener acceso por nombres (resolución DNS) ya que de principio no sabemos que ip va a coger cada contenedor. Por lo tanto vamos a crear los contenedores en la misma red:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/826791dc-6cde-4874-b7c1-7f4765327a14)
+
+Para ejecutar los contenedores:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/1eceb6ec-71a7-464d-883f-d8f48e40131a)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/d87504c6-79f5-4f42-afa5-3bded1c13536)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/4487640e-9c59-46cd-998f-f6e674a4db28)
+
+Redes en Docker
+
+Tipos de redes en Docker
+
+Cuando instalamos docker tenemos las siguientes redes predefinidas:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/d9333bde-6051-4024-b829-bd97871c3cc8)
+
+Vamos a crear un contenedor interactivos con la imagen debian:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/58e377af-daf7-49df-ae82-a5074f0ad0e8)
+
+En otra pestaña, podemos ejecutar esta instrucción para obtener la ip que se le ha asignado:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/260e00d9-164c-4b63-a6ed-0724d1323a11)
+
+Observamos que el contenedor tiene una ip en la red 172.17.0.3/16. Además podemos comprobar que se ha creado un bridge en el host, al que se conectan los contenedores:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/d183334d-4371-4c67-a111-611e32f0778d)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/1c9726d4-dfc5-4d26-805b-4ab518a5fe25)
+
+Si conecto un contenedor a la red host, el contenedor ofrece el servicio que tiene configurado en el puerto de la red del anfitrión. No tiene ip propia, sino es cómo si tuviera la ip del anfitrión. Por lo tanto, los puertos son accesibles directamente desde el host. Por ejemplo:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/4b8fc01f-72f1-4736-9156-ba3526589ae7)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/aeeb6b75-9baf-4e76-bfd6-3ce905b0bcc2)
+
+
+redes_usuario
+
+Redes definidas por el usuario
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/989021df-3853-4c3d-a474-0694c4305f18)
+
+Como no hemos indicado ninguna configuración en la red que hemos creado, docker asigna un direccionamiento a la red:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/c6e8c0e7-d4b2-434e-aa11-b15007c320f7)
+
+Temperaturas.
+
+Ejemplo 2: Despliegue de la aplicación Temperaturas
+
+Vamos a crear una red para conectar los dos contenedores:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/bb4a5cf2-659b-473a-99bf-f0588121a8a0)
+
+Para ejecutar los contenedores:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/851d0536-bf67-4c90-9d9d-e4b9b6e36743)
+
 
 

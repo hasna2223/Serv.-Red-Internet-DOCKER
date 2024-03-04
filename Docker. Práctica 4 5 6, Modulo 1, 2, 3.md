@@ -322,5 +322,38 @@ Para ejecutar los contenedores:
 
 ![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/851d0536-bf67-4c90-9d9d-e4b9b6e36743)
 
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/cb84f940-355e-41ab-a23a-229711a819c5)
 
 
+Tomcat
+
+Ejemplo 4: Despliegue de tomcat + nginx
+
+Desplegando tomcat
+
+Antes de hacer el despliegue del primer contenedor, vamos a crear una red bridge para conectar los contenedores:
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/4144909c-ddca-467a-8fd8-e9032045c079)
+
+A continuación vamos a crear un contenedor a partir de la imagen tomcat. En la  documentación podemos ver que el directorio /usr/local/tomcat/webapps/ es donde  tenemos que poner el fichero de despliegue war (vamos a usar bind mount para montar el fichero war en el directorio). No vamos a mapear puerto porque no vamos a acceder a este contenedor desde el exterior.
+Tenemos un directorio donde tenemos el fichero war (puedes encontrar estos ficheros en el 
+repositorio github)
+
+
+wordpress.
+
+Ejemplo 3: Despliegue de Wordpress + mariadb
+
+Vamos a hacer un contenedor de WordPress
+
+Para ello primero creamos un directorio: sudo mkdir WordPress
+
+Dentro de este directorio creamos un fichero se llama Dockerfile: sudo gedit Dockerfile
+
+Dentro de este fichero ponemos este contenido
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/edf06441-b41a-4d12-aded-a55bfed7fd16)
+
+Guardamos y cerrarlo.
+
+Para ejecutarlo usamos este comando.

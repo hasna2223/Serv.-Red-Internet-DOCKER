@@ -358,10 +358,10 @@ Guardamos y cerrarlo.
 
 Para ejecutarlo usamos este comando.
 
-![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/7484744f-cbf9-4051-9a8c-b17f4ac874b4)
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/dae2e1b7-ed2d-47fb-82a1-c795afcd852f)
 
-![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/dac7f9c2-1b8b-4a18-a3ff-1d41fa6ab86f)
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/7a29cf68-9800-4c93-9daa-9bd6e6ef7291)
 
 En el navegador ponemos http://localhost:8080 Y como veremos ya funciona correctamiente
 
-![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/609e84c5-38fb-436a-af99-9653e13d71c6)
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/267fe0c4-7ddb-49bf-8b7d-01989a8974ea)

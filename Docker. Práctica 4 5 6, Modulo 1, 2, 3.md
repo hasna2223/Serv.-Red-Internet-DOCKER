@@ -211,4 +211,11 @@ Modulo 3
 asociacion_bind_mount
 
 Asociando almacenamiento a los contenedores: bind mount
+
 En este caso vamos a crear un directorio en el sistema de archivo del host, donde vamos a crear un fichero index.html
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/13abe663-04ab-4846-80d3-5e21a9a201e8)
+
+Y comprobamos que realmente estamos sirviendo el fichero que tenemos en el directorio que hemos creado:
+
+

@@ -357,3 +357,9 @@ Dentro de este fichero ponemos este contenido
 Guardamos y cerrarlo.
 
 Para ejecutarlo usamos este comando.
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/7484744f-cbf9-4051-9a8c-b17f4ac874b4)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/dac7f9c2-1b8b-4a18-a3ff-1d41fa6ab86f)
+
+![image](https://github.com/hasna2223/Serv.-Red-Internet-DOCKER/assets/119622209/609e84c5-38fb-436a-af99-9653e13d71c6)
